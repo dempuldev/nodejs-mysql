@@ -11,11 +11,20 @@ app.use(BodyParser.urlencoded({ extended: true
 }));
 
 // Buat koneksi ke database
+// Lokal
+// const db = mysql.createConnection({
+//     host: "localhost",
+//     database: "quiz",
+//     user: "root",
+//     password: "",
+// });
+
+// Production
 const db = mysql.createConnection({
-    host: "localhost",
-    database: "quiz",
-    user: "root",
-    password: "",
+    host: "us-cdbr-east-05.cleardb.net",
+    database: "heroku_b95e84f205ad773",
+    user: "b30595ea601eb2",
+    password: "e3d10270",
 });
 
 // Set template pada directory views
